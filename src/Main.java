@@ -11,8 +11,7 @@ public class Main {
         int result = fa.isCurrentStateAccepted();
         char[] charArray = input.toCharArray();
 
-        for (int i = 0; i < charArray.length; i++) {
-            char ch = charArray[i];
+        for (char ch : charArray) {
             result = fa.processSymbol(ch);
             if (result == FA.UNKNOWN_SYMBOL_ERR) {
                 System.out.println("Error: Unknown symbol encountered.");
